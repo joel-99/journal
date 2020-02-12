@@ -81,11 +81,6 @@
                 "php": ">=5.3.2"
             },
             "type": "symfony-bundle",
-            "extra": {
-                "patches_applied": {
-                    "Remove superfluous argument": "https://github.com/bobthecow/BobthecowMustacheBundle/pull/9.patch"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Bobthecow\\Bundle\\MustacheBundle": ""
@@ -111,7 +106,12 @@
                 "symfony",
                 "templating"
             ],
-            "time": "2014-07-10T12:09:42+00:00"
+            "time": "2014-07-10T12:09:42+00:00",
+            "extra": {
+                "patches_applied": {
+                    "Remove superfluous argument": "https://github.com/bobthecow/BobthecowMustacheBundle/pull/9.patch"
+                }
+            }
         },
         {
             "name": "cocur/slugify",
@@ -151,11 +151,6 @@
                 "zendframework/zend-view": "~2.2"
             },
             "type": "library",
-            "extra": {
-                "patches_applied": {
-                    "strip_tags": "https://github.com/cocur/slugify/pull/201.patch"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Cocur\\Slugify\\": "src"
@@ -181,7 +176,12 @@
                 "slug",
                 "slugify"
             ],
-            "time": "2018-01-22T09:00:48+00:00"
+            "time": "2018-01-22T09:00:48+00:00",
+            "extra": {
+                "patches_applied": {
+                    "strip_tags": "https://github.com/cocur/slugify/pull/201.patch"
+                }
+            }
         },
         {
             "name": "crell/api-problem",
@@ -805,12 +805,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/elifesciences/api-client-php.git",
-                "reference": "abc08e2b8ae22864d7dbc30a1e96912fbd81cb42"
+                "reference": "879961b8c6b59d70a0ade10b10e3f6d32635e37e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elifesciences/api-client-php/zipball/abc08e2b8ae22864d7dbc30a1e96912fbd81cb42",
-                "reference": "abc08e2b8ae22864d7dbc30a1e96912fbd81cb42",
+                "url": "https://api.github.com/repos/elifesciences/api-client-php/zipball/879961b8c6b59d70a0ade10b10e3f6d32635e37e",
+                "reference": "879961b8c6b59d70a0ade10b10e3f6d32635e37e",
                 "shasum": ""
             },
             "require": {
@@ -827,7 +827,7 @@
                 "guzzlehttp/guzzle": "^6.0",
                 "mtdowling/jmespath.php": "^2.0",
                 "phpspec/phpspec": "^2.4",
-                "phpspec/prophecy": "^1.5",
+                "phpspec/prophecy": "^1.10",
                 "phpunit/phpunit": "^5.2",
                 "psr/log": "^1.0"
             },
@@ -853,7 +853,7 @@
                 "MIT"
             ],
             "description": "eLife Sciences API client",
-            "time": "2019-08-06T08:48:30+00:00"
+            "time": "2020-02-10T14:10:10+00:00"
         },
         {
             "name": "elife/api-sdk",
@@ -1234,32 +1234,37 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.2",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
-                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
+                "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0",
-                "psr/http-message": "~1.0"
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
             },
             "provide": {
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "ext-zlib": "*",
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -1289,13 +1294,14 @@
             "keywords": [
                 "http",
                 "message",
+                "psr-7",
                 "request",
                 "response",
                 "stream",
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20T17:10:46+00:00"
+            "time": "2019-07-01T23:21:34+00:00"
         },
         {
             "name": "isometriks/spam-bundle",
@@ -1312,12 +1318,6 @@
                 "shasum": ""
             },
             "type": "library",
-            "extra": {
-                "patches_applied": {
-                    "Add field label": "https://github.com/isometriks/IsometriksSpamBundle/pull/9.patch",
-                    "Use EmailType": "https://github.com/isometriks/IsometriksSpamBundle/pull/17.patch"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Isometriks\\Bundle\\SpamBundle\\": ""
@@ -1341,7 +1341,13 @@
                 "spam",
                 "symfony3"
             ],
-            "time": "2016-09-23T18:48:09+00:00"
+            "time": "2016-09-23T18:48:09+00:00",
+            "extra": {
+                "patches_applied": {
+                    "Add field label": "https://github.com/isometriks/IsometriksSpamBundle/pull/9.patch",
+                    "Use EmailType": "https://github.com/isometriks/IsometriksSpamBundle/pull/17.patch"
+                }
+            }
         },
         {
             "name": "kevinrob/guzzle-cache-middleware",
@@ -2176,6 +2182,46 @@
                 "simple-cache"
             ],
             "time": "2017-01-02T13:31:39+00:00"
+        },
+        {
+            "name": "ralouphie/getallheaders",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "snc/redis-bundle",
